@@ -11,7 +11,7 @@ struct TextBootCamp: View {
     var body: some View {
         VStack{
             //Further modifiers using colors
-            Text("I will give up on my dreams").font(.largeTitle).fontWeight(.semibold).strikethrough().foregroundColor(.red)
+            Text("I will give up on my dreams").font(.largeTitle).fontWeight(.semibold).strikethrough().foregroundColor(.red).fontDesign(.monospaced).multilineTextAlignment(.center)
         }.padding()
         VStack{
             Text("large Title").font(.largeTitle)
@@ -35,6 +35,10 @@ struct TextBootCamp: View {
             //This is the lightest one
      
         }.padding()
+        //Now there are some really cool modifoers for playing around with text
+        VStack {
+            Text("From qwhen the beginning of time when the fitst aroms were made it was decied that cod ewill existis from the betterment of humairtty and ofr the narnia").foregroundStyle(.brown).kerning(4).baselineOffset(4.5).multilineTextAlignment(.leading)
+        }
     }
 }
 #Preview {
