@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+// IMPORTANT POINT
+//In Zstack the items in the Background need to be defined first and then the items on the foreground need to be defined next
+
+
+
 struct ContactCardUI: View {
     var body: some View {
             ZStack(alignment: .bottom) {
@@ -26,6 +31,15 @@ struct ContactCardUI: View {
                     .background(Color.primary.colorInvert().opacity(0.75))
                 
             }
+        VStack {
+            ZStack(alignment: .center) {
+                HStack{
+                    RoundedRectangle(cornerRadius: 25.0).fill(Color(UIColor.secondarySystemBackground))
+                }
+                Text("Sample").foregroundColor(.black)
+            }
+            
+        }
         }
     }
 
