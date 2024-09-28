@@ -16,7 +16,7 @@ struct ContactCardUI: View {
     var body: some View {
             ZStack(alignment: .bottom) {
                 ZStack(alignment: .center) {
-                    Image("cyberpunk").resizable().scaledToFit()
+                    Image("cyberpunk").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity,height: 300,alignment: .center).clipped()
                 }
                 HStack{
                     VStack(alignment: .leading) {
