@@ -7,18 +7,24 @@
 
 import SwiftUI
 
-struct ImageBootcamp: View {
+struct ThreeBPUI: View {
     var body: some View {
         ZStack {
             Rectangle().fill(.black)
-            VStack(spacing: 10){
-                Text("You are bugs".uppercased()).kerning(10).font(.largeTitle).foregroundColor(.white).monospaced()
-                Image(systemName: "ladybug.fill").foregroundColor(.white).font(.largeTitle)
+            VStack(spacing: 20){
+                Text("We are bugs".uppercased()).kerning(10).font(.largeTitle).foregroundColor(.white).monospaced()
+                Image(systemName: "ladybug.fill").foregroundColor(.white).font(.largeTitle).fontWeight(.heavy)
+                
+                HStack(alignment: .center){
+                    Text("The devs are squishing us right now").font(.subheadline).foregroundColor(.white)
+                    Image(systemName: "cup.and.heat.waves.fill").foregroundColor(.white)
+                }
+                
             }
         }
     }
 }
 
 #Preview {
-    ImageBootcamp()
+    ThreeBPUI()
 }
