@@ -16,20 +16,20 @@ struct ContactCardUI: View {
     var body: some View {
             ZStack(alignment: .bottom) {
                 ZStack(alignment: .center) {
-                    Rectangle().fill(Color.gray).frame(width: .infinity, height: 500)
-                    Text("Sample Image Here").foregroundColor(.white).font(.largeTitle).rotationEffect(.degrees(-45.0))
+                    Image("cyberpunk").resizable().scaledToFit()
                 }
-                
                 HStack{
                     VStack(alignment: .leading) {
-                        Text("Arsalan Wahid Asghar").font(.headline)
-                        Text("Senior iOS Developer").font(.subheadline)
+                        Text("Cyberpunks").font(.headline)
+                        Text("Team").font(.subheadline)
                     }
                     Spacer()
+                    VStack(alignment: .trailing) {
+                        Image(systemName:"video.fill").symbolRenderingMode(.multicolor).font(.system(size: 50))
+                    }
                 }.padding()
                     .foregroundColor(.primary)
                     .background(Color.primary.colorInvert().opacity(0.75))
-                
             }
         VStack {
             ZStack(alignment: .center) {
