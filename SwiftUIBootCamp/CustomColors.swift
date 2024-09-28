@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+//having problems in trim function and poistioning cirle is there but hidden
+// Having problems with Zstack and unable to make the view I need
+
+
 struct CustomColors: View {
     var body: some View {
         
