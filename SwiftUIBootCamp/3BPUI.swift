@@ -16,8 +16,21 @@ struct ThreeBPUI: View {
                 Image(systemName: "ladybug.fill").foregroundColor(.white).font(.largeTitle).fontWeight(.heavy)
                 
                 HStack(alignment: .center){
-                    Text("The devs are squishing us right now").font(.subheadline).foregroundColor(.white)
-                    Image(systemName: "cup.and.heat.waves.fill").foregroundColor(.white)
+                    Text("Work in Progress")
+                        .font(Font.system(size: 30, weight: .bold))
+                        .multilineTextAlignment(.center)
+                        .overlay {
+                            LinearGradient(
+                                colors: [.red, .blue, .green, .yellow],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                            .mask(
+                                Text("Work in Progress")
+                                    .font(Font.system(size: 30, weight: .bold))
+                                    .multilineTextAlignment(.center)
+                            )
+                        }
                 }
                 
             }
