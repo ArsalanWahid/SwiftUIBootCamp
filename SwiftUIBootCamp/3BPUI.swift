@@ -12,8 +12,11 @@ struct ThreeBPUI: View {
         ZStack {
             Rectangle().fill(.black)
             VStack(spacing: 20){
-                Text("We are bugs".uppercased()).kerning(10).font(.largeTitle).foregroundColor(.white).monospaced()
-                Image(systemName: "ladybug.fill").foregroundColor(.white).font(.largeTitle).fontWeight(.heavy)
+                HStack(alignment: .center){
+                    Text("We are bugs".uppercased()).font(.largeTitle).foregroundColor(.white).monospaced()
+                    Image(systemName: "ladybug.fill").foregroundColor(.white).font(.largeTitle).fontWeight(.heavy)
+                }
+                
                 
                 HStack(alignment: .center){
                     Text("Work in Progress")
@@ -31,6 +34,8 @@ struct ThreeBPUI: View {
                                     .multilineTextAlignment(.center)
                             )
                         }
+                    Image(systemName:"cup.and.heat.waves.fill").font(.system(size: 30)).foregroundColor(.white)
+                    
                 }
                 
             }
