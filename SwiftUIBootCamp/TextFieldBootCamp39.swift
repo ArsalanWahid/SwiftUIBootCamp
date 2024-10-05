@@ -25,7 +25,8 @@ struct TextFieldBootCamp39: View {
                 TextField(
                     "username (email address)",
                     text: $username
-                ).padding()
+                ).padding([.leading,.trailing],30)
+                    .padding([.top,.bottom],10)
                  .background(Color.gray.opacity(0.3).cornerRadius(10))
                  .font(.headline)
                  .onSubmit {
